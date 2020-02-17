@@ -16,27 +16,19 @@ const literals = {
   ...itemListHeaderLiterals,
 };
 
-const categories = [
+const tags = [
   {
     id: '1',
-    name: 'インテリア',
+    name: 'Terror',
   },
   {
     id: '2',
-    name: 'レディース',
+    name: 'Acting',
   },
   {
     id: '3',
-    name: 'ベビー・キッズ',
+    name: 'Outside',
     isCurrent: true,
-  },
-  {
-    id: '4',
-    name: 'エンタメ',
-  },
-  {
-    id: '5',
-    name: 'メンズ',
   },
 ];
 
@@ -92,7 +84,7 @@ const getThemeProviderDecorator = storyFn => (
   <ThemeProvider theme={theme}>{storyFn()}</ThemeProvider>
 );
 
-storiesOf('4. Templates|ItemList', module)
+storiesOf('4. Templates|RoomList', module)
   .addDecorator(StoryRouter())
   .addDecorator(getThemeProviderDecorator)
   .add('default', () => (
@@ -100,10 +92,10 @@ storiesOf('4. Templates|ItemList', module)
       literals={literals}
       search={search}
       itemList={itemList}
-      categories={categories}
-      handleChange={action('Input detected on ItemListTemplate')}
-      handleClick={action('Button on ItemListTemplate clicked')}
+      tags={tags}
+      handleChange={action('Input detected')}
+      handleClick={action('Button clicked')}
     />
   ));
 
-export { itemListHeaderLiterals, categories, productData, footerData, search };
+export { itemListHeaderLiterals, tags, productData, footerData, search };

@@ -7,14 +7,14 @@ import ItemListHeader from '../itemListHeader';
 
 import {
   itemListHeaderLiterals as literals,
-  categories,
+  tags,
   search,
 } from '../../templates/stories/itemListTemplate.stories';
 
 storiesOf('3. Organisms|ItemList.Header', module).add('default', () => (
   <ItemListHeader
     literals={literals}
-    categories={categories}
+    tags={tags}
     searchValue={search}
     handleChange={action('Input detected')}
     handleClick={action('IconButton on ItemDetailAppBar clicked')}

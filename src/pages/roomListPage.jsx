@@ -1,28 +1,28 @@
 import React, { useState, useEffect } from 'react';
 
-import { getCategories, getItems } from '../utils/request';
-import ItemListTemplate from '../templates/itemListTemplate';
+import { getTags, getRooms } from '../utils/request';
+import RoomListTemplate from '../templates/roomListTemplate';
 
-export default function ItemListPage() {
+export default function RoomListPage() {
   const literals = {
     search: 'Search',
   };
 
   const [search, setSearch] = useState('');
-  const [categories, setCategories] = useState();
+  const [tags, setTags] = useState();
   const [items, setItems] = useState();
 
   useEffect(() => {
-    getCategories(setCategories);
-    getItems(setItems);
+    getTags(setTags);
+    getRooms(setItems);
   }, []);
 
   return (
-    <ItemListTemplate
+    <RoomListTemplate
       literals={literals}
       search={search}
       itemList={items}
-      categories={categories}
+      tags={tags}
       handleChange={event => {
         setSearch(event.currentTarget.value);
       }}

@@ -9,13 +9,7 @@ import AppBar from '../molecules/appBar';
 import ItemListToolbar from '../molecules/itemListToolbar';
 import ItemListCategoriesBar from '../molecules/itemListCategoriesBar';
 
-export default function ItemListHeader({
-  literals,
-  categories,
-  searchValue,
-  handleChange,
-  handleClick,
-}) {
+export default function ItemListHeader({ literals, tags, searchValue, handleChange, handleClick }) {
   const useStyles = makeStyles(theme => ({
     appbar: {
       backgroundColor: 'transparent',
@@ -45,14 +39,14 @@ export default function ItemListHeader({
           <ItemListToolbar
             literals={literals}
             className={classes.toolbar}
-            categories={categories}
+            tags={tags}
             searchValue={searchValue}
             handleChange={handleChange}
             handleClick={handleClick}
           />
         </Grid>
         <Grid item xs={12} className={classes.container}>
-          <ItemListCategoriesBar categories={categories} handleClick={handleClick} />
+          <ItemListCategoriesBar tags={tags} handleClick={handleClick} />
         </Grid>
         <Grid item xs={12} container justify="center">
           <IconButton color="primary" className={classes.overlayed} handleClick={handleClick}>
@@ -66,7 +60,7 @@ export default function ItemListHeader({
 
 ItemListHeader.defaultProps = {
   literals: {},
-  categories: [],
+  tags: [],
   searchValue: '',
   handleChange: () => {},
   handleClick: () => {},
@@ -76,7 +70,7 @@ ItemListHeader.propTypes = {
   literals: PropTypes.shape({
     search: PropTypes.string,
   }),
-  categories: PropTypes.arrayOf(PropTypes.object),
+  tags: PropTypes.arrayOf(PropTypes.object),
   searchValue: PropTypes.string,
   handleChange: PropTypes.func,
   handleClick: PropTypes.func,

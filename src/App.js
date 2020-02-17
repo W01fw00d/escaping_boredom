@@ -5,8 +5,8 @@ import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import { ThemeProvider } from '@material-ui/core';
 
 import theme from './styles/global-styles';
-import ItemListPage from './pages/itemListPage';
-import ItemDetailPage from './pages/itemDetailPage';
+import RoomListPage from './pages/roomListPage';
+import RoomDetailPage from './pages/roomDetailPage';
 import NotFoundPage from './pages/notFoundPage';
 
 const App = () => {
@@ -16,10 +16,10 @@ const App = () => {
         <ThemeProvider theme={theme}>
           <Switch>
             <Route exact path="/list">
-              <ItemListPage />
+              <RoomListPage />
             </Route>
             <Route exact path="/detail/:itemId">
-              <ItemDetailPage />
+              <RoomDetailPage />
             </Route>
             <Redirect from="/" exact to="/list" />
             <Route component={NotFoundPage} />

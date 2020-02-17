@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { getItem } from '../utils/request';
-import ItemDetailTemplate from '../templates/itemDetailTemplate';
+import { getRoomDetails } from '../utils/request';
+import ItemDetailTemplate from '../templates/roomDetailTemplate';
 
-export default function ItemDetailPage() {
+export default function RoomDetailPage() {
   const literals = {
     like: 'Like!',
     comment: 'Comment',
     description: 'Description',
-    buy: 'Buy',
+    buy: 'Book',
   };
 
   const [data, setData] = useState();
   const { itemId } = useParams();
 
   useEffect(() => {
-    getItem(itemId, result => {
+    getRoomDetails(itemId, result => {
       if (result) {
         setData({
           name: result.name,

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { makeStyles } from '@material-ui/core';
 
-import banner from '../../public/sold_banner.png';
+import banner from '../../public/banner.png';
 import Link from '../atoms/link';
 import Image from '../atoms/image';
 import ProductImageFooter from '../molecules/productImageFooter';

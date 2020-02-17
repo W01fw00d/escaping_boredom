@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "code": "terror",
+    "name": "Terror"
+  },
+  {
+    "id": 2,
+    "code": "actors",
+    "name": "With Actors"
+  },
+  {
+    "id": 3,
+    "code": "outside",
+    "name": "Placed Outside"
+  }
+]

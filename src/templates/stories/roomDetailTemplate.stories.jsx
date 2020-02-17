@@ -7,7 +7,7 @@ import { action } from '@storybook/addon-actions';
 import { ThemeProvider } from '@material-ui/core';
 import theme from '../../styles/global-styles';
 
-import ItemDetailTemplate from '../itemDetailTemplate';
+import RoomDetailTemplate from '../roomDetailTemplate';
 
 const buttonsRowLiterals = {
   like: 'Like!',
@@ -17,7 +17,7 @@ const descriptionSectionLiterals = {
   description: 'Description',
 };
 const footerBarLiterals = {
-  buy: 'Buy',
+  buy: 'Book',
 };
 const literals = {
   ...buttonsRowLiterals,
@@ -25,13 +25,13 @@ const literals = {
   ...footerBarLiterals,
 };
 
-const name = 'men1';
-const imageSrc = 'https://dummyimage.com/400x400/000/fff?text=men1';
+const name = 'room1';
+const imageSrc = 'https://dummyimage.com/400x400/000/fff?text=room1';
 const likeCount = 1;
 const description = 'size free 1';
 const footerBarData = {
   price: 51,
-  shippingFee: '送料込み',
+  isGroupPrice: '送料込み',
 };
 const data = {
   name,
@@ -45,15 +45,11 @@ const getThemeProviderDecorator = storyFn => (
   <ThemeProvider theme={theme}>{storyFn()}</ThemeProvider>
 );
 
-storiesOf('4. Templates|ItemDetail', module)
+storiesOf('4. Templates|RoomDetail', module)
   .addDecorator(StoryRouter())
   .addDecorator(getThemeProviderDecorator)
   .add('default', () => (
-    <ItemDetailTemplate
-      literals={literals}
-      data={data}
-      handleClick={action('Button on ItemDetailTemplate clicked')}
-    />
+    <RoomDetailTemplate literals={literals} data={data} handleClick={action('Button clicked')} />
   ));
 
 export {

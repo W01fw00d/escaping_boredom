@@ -5,7 +5,7 @@ import { makeStyles, Grid } from '@material-ui/core';
 
 import TextButton from '../atoms/textButton';
 
-export default function ItemListCategoriesBar({ categories, handleClick }) {
+export default function ItemListCategoriesBar({ tags, handleClick }) {
   const useStyles = makeStyles(theme => ({
     button: {
       backgroundColor: theme.palette.primary.main,
@@ -18,7 +18,7 @@ export default function ItemListCategoriesBar({ categories, handleClick }) {
 
   return (
     <Grid container justify="center">
-      {categories.map(category => (
+      {tags.map(category => (
         <Grid key={category.id} item>
           <TextButton
             className={`${classes.button} ${category.isCurrent ? classes.currentCategory : ''}`}
@@ -34,11 +34,11 @@ export default function ItemListCategoriesBar({ categories, handleClick }) {
 }
 
 ItemListCategoriesBar.defaultProps = {
-  categories: [],
+  tags: [],
   handleClick: () => {},
 };
 
 ItemListCategoriesBar.propTypes = {
-  categories: PropTypes.arrayOf(PropTypes.object),
+  tags: PropTypes.arrayOf(PropTypes.object),
   handleClick: PropTypes.func,
 };

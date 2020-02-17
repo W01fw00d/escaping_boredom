@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "name": "room 1",
+    "description": "description room 1",
+    "m_likes": 5,
+    "n_comments": 0,
+    "price": 30,
+    "is_group_price": false,
+    "editor_choice": false,
+    "image": "https://dummyimage.com/400x400/000/fff?text=room1",
+    "tags": [1, 2]
+  },
+  {
+    "id": "2",
+    "name": "room 2",
+    "description": "description room 2",
+    "like_count": 0,
+    "comment_count": 11,
+    "price": 150,
+    "is_group_price": true,
+    "editor_choice": true,
+    "image": "https://dummyimage.com/400x400/000/fff?text=room2",
+    "category_id": [3]
+  }
+]

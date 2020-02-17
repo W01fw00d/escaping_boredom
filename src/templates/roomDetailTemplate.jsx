@@ -10,7 +10,7 @@ import ItemDetailButtonsRow from '../organisms/itemDetailButtonsRow';
 import ItemDetailDescriptionSection from '../organisms/itemDetailDescriptionSection';
 import ItemDetailFooterBar from '../organisms/itemDetailFooterBar';
 
-export default function ItemDetailTemplate({ literals, data, handleClick }) {
+export default function RoomDetailTemplate({ literals, data, handleClick }) {
   const useStyles = makeStyles(theme => ({
     marginBottom: {
       marginBottom: theme.spacing(7),
@@ -38,32 +38,34 @@ export default function ItemDetailTemplate({ literals, data, handleClick }) {
   };
 
   return (
-    <div>
-      <ItemDetailAppBar name={data.name} handleClick={handleClick} />
-      <Image src={data.imageSrc} />
-      <Typography variant="h6" color="inherit" className={classes.name}>
-        {data.name}
-      </Typography>
-      <ItemDetailButtonsRow
-        literals={buttonsRowLiterals}
-        likeCount={data.likeCount}
-        handleClick={handleClick}
-      />
-      <ItemDetailDescriptionSection
-        className={classes.marginBottom}
-        literals={descriptionSectionLiterals}
-        description={data.description}
-      />
-      <ItemDetailFooterBar
-        literals={footerBarLiterals}
-        data={footerBarData}
-        handleClick={handleClick}
-      />
-    </div>
+    data && (
+      <div>
+        <ItemDetailAppBar name={data.name} handleClick={handleClick} />
+        <Image src={data.imageSrc} />
+        <Typography variant="h6" color="inherit" className={classes.name}>
+          {data.name}
+        </Typography>
+        <ItemDetailButtonsRow
+          literals={buttonsRowLiterals}
+          likeCount={data.likeCount}
+          handleClick={handleClick}
+        />
+        <ItemDetailDescriptionSection
+          className={classes.marginBottom}
+          literals={descriptionSectionLiterals}
+          description={data.description}
+        />
+        <ItemDetailFooterBar
+          literals={footerBarLiterals}
+          data={footerBarData}
+          handleClick={handleClick}
+        />
+      </div>
+    )
   );
 }
 
-ItemDetailTemplate.defaultProps = {
+RoomDetailTemplate.defaultProps = {
   literals: {
     like: ItemDetailButtonsRow.defaultProps.literals.like,
     comment: ItemDetailButtonsRow.defaultProps.literals.comment,
@@ -81,7 +83,7 @@ ItemDetailTemplate.defaultProps = {
   handleClick: () => {},
 };
 
-ItemDetailTemplate.propTypes = {
+RoomDetailTemplate.propTypes = {
   literals: PropTypes.shape({
     like: ItemDetailButtonsRow.propTypes.literals.like,
     comment: ItemDetailButtonsRow.propTypes.literals.comment,
