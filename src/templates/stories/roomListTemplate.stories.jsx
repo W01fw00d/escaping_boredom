@@ -7,7 +7,7 @@ import { action } from '@storybook/addon-actions';
 import { ThemeProvider } from '@material-ui/core';
 import theme from '../../styles/global-styles';
 
-import ItemListTemplate from '../itemListTemplate';
+import ItemListTemplate from '../roomListTemplate';
 
 const itemListHeaderLiterals = {
   search: 'Search',

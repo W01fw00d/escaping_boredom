@@ -8,7 +8,7 @@ import ItemDetailFooterBar from '../itemDetailFooterBar';
 import {
   footerBarLiterals,
   footerBarData,
-} from '../../templates/stories/itemDetailTemplate.stories';
+} from '../../templates/stories/roomDetailTemplate.stories';
 
 storiesOf('3. Organisms|ItemDetail.Footer', module).add('default', () => (
   <ItemDetailFooterBar

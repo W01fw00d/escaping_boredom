@@ -9,7 +9,7 @@ import {
   itemListHeaderLiterals as literals,
   tags,
   search,
-} from '../../templates/stories/itemListTemplate.stories';
+} from '../../templates/stories/roomListTemplate.stories';
 
 storiesOf('3. Organisms|ItemList.Header', module).add('default', () => (
   <ItemListHeader

@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 
 import ItemListProduct from '../itemListProduct';
 
-import { productData as data } from '../../templates/stories/itemListTemplate.stories';
+import { productData as data } from '../../templates/stories/roomListTemplate.stories';
 
 storiesOf('3. Organisms|ItemList.Product', module)
   .addDecorator(StoryRouter())

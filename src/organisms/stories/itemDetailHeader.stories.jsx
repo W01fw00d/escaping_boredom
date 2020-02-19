@@ -6,7 +6,7 @@ import { action } from '@storybook/addon-actions';
 
 import ItemDetailAppBar from '../itemDetailHeader';
 
-import { itemName } from '../../templates/stories/itemDetailTemplate.stories';
+import { itemName } from '../../templates/stories/roomDetailTemplate.stories';
 
 storiesOf('3. Organisms|ItemDetail.Header', module)
   .addDecorator(StoryRouter())

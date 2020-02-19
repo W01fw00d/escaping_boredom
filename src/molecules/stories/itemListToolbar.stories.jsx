@@ -8,7 +8,7 @@ import ItemListToolbar from '../itemListToolbar';
 import {
   itemListHeaderLiterals as literals,
   search,
-} from '../../templates/stories/itemListTemplate.stories';
+} from '../../templates/stories/roomListTemplate.stories';
 
 storiesOf('2. Molecules|ItemList.Toolbar', module).add('default', () => (
   <ItemListToolbar

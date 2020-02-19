@@ -8,7 +8,7 @@ import ItemDetailButtonsRow from '../itemDetailButtonsRow';
 import {
   buttonsRowLiterals as literals,
   likeCount,
-} from '../../templates/stories/itemDetailTemplate.stories';
+} from '../../templates/stories/roomDetailTemplate.stories';
 
 storiesOf('3. Organisms|ItemDetail.ButtonsRow', module).add('default', () => (
   <ItemDetailButtonsRow

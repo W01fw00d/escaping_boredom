@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 
 import ItemListCategoriesBar from '../itemListCategoriesBar';
 
-import { tags } from '../../templates/stories/itemListTemplate.stories';
+import { tags } from '../../templates/stories/roomListTemplate.stories';
 
 storiesOf('2. Molecules|ItemList.CategoriesBar', module).add('default', () => (
   <ItemListCategoriesBar

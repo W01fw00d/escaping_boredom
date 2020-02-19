@@ -6,7 +6,7 @@ import { storiesOf } from '@storybook/react';
 import ItemListGrid from '../itemListGrid';
 import ItemListProduct from '../../organisms/itemListProduct';
 
-import { productData as data } from '../../templates/stories/itemListTemplate.stories';
+import { productData as data } from '../../templates/stories/roomListTemplate.stories';
 
 const dataObjects = [
   { ...data, id: '1' },
