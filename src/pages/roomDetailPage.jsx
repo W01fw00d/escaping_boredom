@@ -20,11 +20,11 @@ export default function RoomDetailPage() {
       if (result) {
         setData({
           name: result.name,
-          imageSrc: result.image,
+          image: result.image,
           likeCount: result.likeCount,
           description: result.description,
           price: result.price,
-          shippingFee: result.shippingFee,
+          isGroupPrice: result.isGroupPrice,
         });
       }
     });

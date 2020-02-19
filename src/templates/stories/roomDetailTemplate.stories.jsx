@@ -5,40 +5,24 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
 import { ThemeProvider } from '@material-ui/core';
+
 import theme from '../../styles/global-styles';
+import allLiterals from '../../../public/storybook_fake_data/literals.json';
+import allData from '../../../public/storybook_fake_data/room-details.json';
 
 import RoomDetailTemplate from '../roomDetailTemplate';
 
-const buttonsRowLiterals = {
-  like: 'Like!',
-  comment: 'Comment',
-};
-const descriptionSectionLiterals = {
-  description: 'Description',
-};
-const footerBarLiterals = {
-  buy: 'Book',
-};
 const literals = {
-  ...buttonsRowLiterals,
-  ...descriptionSectionLiterals,
-  ...footerBarLiterals,
+  like: allLiterals.like,
+  comment: allLiterals.comment,
+  description: allLiterals.description,
+  buy: allLiterals.buy,
 };
 
-const name = 'room1';
-const imageSrc = 'fake_imgs/room.jpg';
-const likeCount = 1;
-const description = 'size free 1';
-const footerBarData = {
-  price: 51,
-  isGroupPrice: '送料込み',
-};
 const data = {
-  name,
-  imageSrc,
-  likeCount,
-  description,
-  ...footerBarData,
+  image: allData.image,
+  price: allData.price,
+  isGroupPrice: allData.isGroupPrice,
 };
 
 const getThemeProviderDecorator = storyFn => (
@@ -51,15 +35,3 @@ storiesOf('4. Templates|RoomDetail', module)
   .add('default', () => (
     <RoomDetailTemplate literals={literals} data={data} handleClick={action('Button clicked')} />
   ));
-
-export {
-  buttonsRowLiterals,
-  descriptionSectionLiterals,
-  footerBarLiterals,
-  name as itemName,
-  likeCount,
-  imageSrc as itemImageSrc,
-  likeCount as itemLikeCount,
-  description,
-  footerBarData,
-};

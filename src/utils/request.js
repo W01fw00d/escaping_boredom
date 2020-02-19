@@ -1,3 +1,5 @@
+import getJson from './json_file';
+
 const currentDockerUrl = 'http://127.0.0.1:5000';
 const isMocked = true;
 
@@ -13,15 +15,7 @@ const httpGet = (params, callback) => {
 };
 
 function mockedGet(params, callback) {
-  var rawFile = new XMLHttpRequest();
-  rawFile.overrideMimeType('application/json');
-  rawFile.open('GET', `fake_data/${params}.json`, true);
-  rawFile.onreadystatechange = function() {
-    if (rawFile.readyState === 4 && rawFile.status == '200') {
-      callback(JSON.parse(rawFile.responseText));
-    }
-  };
-  rawFile.send(null);
+  getJson(`fake_data/${params}.json`, callback);
 }
 
 const getData = (params, callback) => (isMocked ? mockedGet : httpGet)(params, callback);

@@ -29,7 +29,7 @@ export default function ItemListProduct({ data }) {
   return (
     <Link to={`/detail/${data.id}`}>
       <div className={classes.wrapper}>
-        {data.isSoldOut && <Image src={banner} className={classes.banner} />}
+        {data.isEditorsChoice && <Image src={banner} className={classes.banner} />}
         <Image src={data.image} />
       </div>
       <ProductImageFooter data={footerData} />
@@ -48,6 +48,6 @@ ItemListProduct.propTypes = {
     name: PropTypes.string,
     price: PropTypes.number,
     likeCount: PropTypes.number,
-    isSoldOut: PropTypes.bool,
+    isEditorsChoice: PropTypes.bool,
   }),
 };

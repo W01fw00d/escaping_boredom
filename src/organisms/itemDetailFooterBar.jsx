@@ -37,7 +37,7 @@ export default function ItemDetailFooterBar({ literals, data, handleClick }) {
               {priceWithCurrency}
             </Typography>
             <Typography variant="subtitle2" color="inherit" className={classes.fee}>
-              {data.shippingFee}
+              {data.isGroupPrice ? 'Per group' : 'Per person'}
             </Typography>
           </Grid>
         </Grid>
@@ -68,7 +68,7 @@ ItemDetailFooterBar.propTypes = {
   }),
   data: PropTypes.shape({
     price: PropTypes.number,
-    shippingFee: PropTypes.string,
+    isGroupPrice: PropTypes.boolean,
   }),
   handleClick: PropTypes.func,
 };

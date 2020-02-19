@@ -1,7 +1,7 @@
 {
   "id": "1",
-  "name": "room 1",
-  "description": "description room 1",
+  "name": "Name",
+  "description": "Description",
   "likeCount": 5,
   "commentsCount": 0,
   "price": 30,

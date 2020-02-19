@@ -34,14 +34,14 @@ export default function RoomDetailTemplate({ literals, data, handleClick }) {
 
   const footerBarData = {
     price: data.price,
-    shippingFee: data.shippingFee,
+    isGroupPrice: data.isGroupPrice,
   };
 
   return (
     data && (
       <div>
         <ItemDetailAppBar name={data.name} handleClick={handleClick} />
-        <Image src={data.imageSrc} />
+        <Image src={data.image} />
         <Typography variant="h6" color="inherit" className={classes.name}>
           {data.name}
         </Typography>
@@ -74,11 +74,11 @@ RoomDetailTemplate.defaultProps = {
   },
   data: {
     name: ItemDetailAppBar.defaultProps.name,
-    imageSrc: Image.defaultProps.src,
+    image: Image.defaultProps.src,
     likeCount: ItemDetailAppBar.defaultProps.likeCount,
     description: ItemDetailButtonsRow.defaultProps.description,
     price: ItemDetailFooterBar.defaultProps.price,
-    shippingFee: ItemDetailFooterBar.defaultProps.shippingFee,
+    isGroupPrice: ItemDetailFooterBar.defaultProps.isGroupPrice,
   },
   handleClick: () => {},
 };
@@ -92,11 +92,11 @@ RoomDetailTemplate.propTypes = {
   }),
   data: PropTypes.shape({
     name: ItemDetailAppBar.propTypes.name,
-    imageSrc: Image.propTypes.src,
+    image: Image.propTypes.src,
     likeCount: ItemDetailAppBar.propTypes.likeCount,
     description: ItemDetailButtonsRow.propTypes.description,
     price: ItemDetailFooterBar.propTypes.price,
-    shippingFee: ItemDetailFooterBar.propTypes.shippingFee,
+    isGroupPrice: ItemDetailFooterBar.propTypes.isGroupPrice,
   }),
   handleClick: PropTypes.func,
 };

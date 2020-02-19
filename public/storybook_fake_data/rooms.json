@@ -22,5 +22,17 @@
     "isEditorsChoice": true,
     "image": "fake_imgs/room.jpg",
     "category_id": [3]
+  },
+  {
+    "id": "3",
+    "name": "room 3",
+    "description": "description room 3",
+    "like_count": 5,
+    "comment_count": 11,
+    "price": 15,
+    "isGroupPrice": true,
+    "isEditorsChoice": false,
+    "image": "fake_imgs/room.jpg",
+    "category_id": [1, 3]
   }
 ]

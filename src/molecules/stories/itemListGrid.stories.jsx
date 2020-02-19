@@ -3,23 +3,30 @@ import React from 'react';
 import StoryRouter from 'storybook-react-router';
 import { storiesOf } from '@storybook/react';
 
-import ItemListGrid from '../itemListGrid';
+import roomsData from '../../../public/storybook_fake_data/rooms.json';
 import ItemListProduct from '../../organisms/itemListProduct';
 
-import { productData as data } from '../../templates/stories/roomListTemplate.stories';
+import ItemListGrid from '../itemListGrid';
 
-const dataObjects = [
-  { ...data, id: '1' },
-  { ...data, id: '2' },
-  { ...data, id: '3' },
+const getItemData = room => ({
+  image: room.image,
+  name: room.name,
+  price: room.price,
+  likeCount: room.likeCount,
+});
+
+const data = [
+  { ...getItemData(roomsData[0]), id: '1' },
+  { ...getItemData(roomsData[1]), id: '2' },
+  { ...getItemData(roomsData[2]), id: '3' },
 ];
 
 storiesOf('2. Molecules|ItemList.Grid', module)
   .addDecorator(StoryRouter())
   .add('default', () => (
     <ItemListGrid>
-      {dataObjects.map(dataObject => (
-        <ItemListProduct key={dataObject.id} data={dataObject} />
+      {data.map(item => (
+        <ItemListProduct key={item.id} data={item} />
       ))}
     </ItemListGrid>
   ));

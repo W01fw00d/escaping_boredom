@@ -2,13 +2,15 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
+import allLiterals from '../../../public/storybook_fake_data/literals.json';
+import data from '../../../public/storybook_fake_data/room-details.json';
+
 import ItemDetailDescriptionSection from '../itemDetailDescriptionSection';
 
-import {
-  descriptionSectionLiterals as literals,
-  description,
-} from '../../templates/stories/roomDetailTemplate.stories';
+const literals = {
+  description: allLiterals.description,
+};
 
 storiesOf('3. Organisms|ItemDetail.DescriptionSection', module).add('default', () => (
-  <ItemDetailDescriptionSection literals={literals} description={description} />
+  <ItemDetailDescriptionSection literals={literals} description={data.details} />
 ));
