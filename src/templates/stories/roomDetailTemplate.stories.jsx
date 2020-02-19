@@ -26,7 +26,7 @@ const literals = {
 };
 
 const name = 'room1';
-const imageSrc = 'https://dummyimage.com/400x400/000/fff?text=room1';
+const imageSrc = 'fake_imgs/room.jpg';
 const likeCount = 1;
 const description = 'size free 1';
 const footerBarData = {

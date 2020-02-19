@@ -58,4 +58,4 @@ npm run-script build
 
 - Editor's choice banner from original image (https://pixabay.com/illustrations/tape-red-decor-for-the-web-plate-2410588/), which is under Pixabay License, free for commercial use
 
-- Fake images from dummyimage.com
+- Fake room image from https://pixabay.com/photos/wall-furniture-design-apartment-416060/

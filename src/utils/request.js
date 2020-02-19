@@ -15,7 +15,7 @@ const httpGet = (params, callback) => {
 function mockedGet(params, callback) {
   var rawFile = new XMLHttpRequest();
   rawFile.overrideMimeType('application/json');
-  rawFile.open('GET', `fakes/${params}.json`, true);
+  rawFile.open('GET', `fake_data/${params}.json`, true);
   rawFile.onreadystatechange = function() {
     if (rawFile.readyState === 4 && rawFile.status == '200') {
       callback(JSON.parse(rawFile.responseText));

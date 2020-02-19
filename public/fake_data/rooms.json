@@ -8,7 +8,7 @@
     "price": 30,
     "is_group_price": false,
     "editor_choice": false,
-    "image": "https://dummyimage.com/400x400/000/fff?text=room1",
+    "image": "fake_imgs/room.jpg",
     "tags": [1, 2]
   },
   {
@@ -20,7 +20,7 @@
     "price": 150,
     "is_group_price": true,
     "editor_choice": true,
-    "image": "https://dummyimage.com/400x400/000/fff?text=room2",
+    "image": "fake_imgs/room.jpg",
     "category_id": [3]
   }
 ]

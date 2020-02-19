@@ -42,7 +42,7 @@ const itemList = [
     price: 51,
     isSoldOut: false,
     shippingFee: '送料込み',
-    image: 'http://dummyimage.com/400x400/000/fff?text=men1',
+    image: 'fake_imgs/room.jpg',
     categoryId: 1,
   },
   {
@@ -54,7 +54,7 @@ const itemList = [
     price: 10000,
     isSoldOut: true,
     shippingFee: '送料込み',
-    image: 'http://dummyimage.com/400x400/000/fff?text=men2',
+    image: 'fake_imgs/room.jpg',
     categoryId: 2,
   },
   {
@@ -66,7 +66,7 @@ const itemList = [
     price: 1500,
     isSoldOut: false,
     shippingFee: '送料込み',
-    image: 'http://dummyimage.com/400x400/000/fff?text=men3',
+    image: 'fake_imgs/room.jpg',
     categoryId: 3,
   },
 ];
