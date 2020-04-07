@@ -18,6 +18,12 @@ npm start
 npm run storybook
 ```
 
+- Launch Cypress
+
+```
+npm run cypress:open
+```
+
 - Build
 
 ```
