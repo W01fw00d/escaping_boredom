@@ -29,7 +29,7 @@ export default function ItemDetailAppBar({ name, handleClick }) {
     <AppBar position="sticky">
       <Grid container alignItems="center" className={classes.layout}>
         <Grid item xs={2} container justify="center">
-          <Link to="/">
+          <Link id="back" to="/">
             <ArrowBackIcon />
           </Link>
         </Grid>
