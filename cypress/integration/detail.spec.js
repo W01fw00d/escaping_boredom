@@ -1,3 +1,5 @@
+import { getRandomNumber, getRandomString } from '../test-utils';
+
 describe('On Detail Page, navigate', function() {
   const URL = 'detail/1';
 
@@ -9,7 +11,7 @@ describe('On Detail Page, navigate', function() {
       response: {
         id: '1',
         name,
-        description: 'description',
+        description: getRandomString(getRandomNumber(1, 100)),
         likeCount,
         commentsCount: 0,
         price: 0,
@@ -28,8 +30,8 @@ describe('On Detail Page, navigate', function() {
   });
 
   it('User checks that list item is rendered with its name and like count', function() {
-    const name = 'roomName';
-    const likeCount = 1;
+    const name = getRandomString(getRandomNumber(1, 20));
+    const likeCount = getRandomNumber(1, 100);
 
     setStub(name, likeCount);
 

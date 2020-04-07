@@ -60,6 +60,8 @@ npm run-script build
 
 - Two color themes have been defined in order to allow the different colored buttons to coexist on the same design system.
 
+- A random number and string generator has been added to Cypress Tests in order to garantee that different data will fit correctly on the UI (for example, this simulates the effect of having different languages).
+
 ## Atribution
 
 - Favicon generated from original image (https://pixabay.com/photos/leuchtkasten-shield-output-note-1773916/), which is under Pixabay License, free for commercial use

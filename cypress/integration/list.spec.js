@@ -1,7 +1,9 @@
+import { getRandomNumber, getRandomString } from '../test-utils';
+
 describe('On List Page', function() {
   const URL = 'list';
 
-  const setStub = () => {
+  const setStub = (firstName, secondName) => {
     cy.server();
     cy.route({
       method: 'GET',
@@ -10,7 +12,7 @@ describe('On List Page', function() {
         {
           id: 1,
           code: 'terror',
-          name: 'Terror',
+          name: getRandomString(getRandomNumber(1, 10)),
         },
       ],
     });
@@ -21,11 +23,11 @@ describe('On List Page', function() {
       response: [
         {
           id: '1',
-          name: 'room 1',
-          description: 'description room 1',
-          likeCount: 5,
-          commentsCount: 0,
-          price: 30,
+          name: firstName,
+          description: getRandomString(getRandomNumber(1, 100)),
+          likeCount: getRandomNumber(1, 1000),
+          commentsCount: getRandomNumber(1, 1000),
+          price: getRandomNumber(1, 1000000),
           isGroupPrice: false,
           isEditorsChoice: false,
           image: 'fake_imgs/room.jpg',
@@ -33,11 +35,11 @@ describe('On List Page', function() {
         },
         {
           id: '2',
-          name: 'room 2',
-          description: 'description room 2',
-          like_count: 0,
-          comment_count: 11,
-          price: 150,
+          name: secondName,
+          description: getRandomString(getRandomNumber(1, 100)),
+          like_count: getRandomNumber(1, 1000),
+          comment_count: getRandomNumber(1, 1000),
+          price: getRandomNumber(1, 1000000),
           isGroupPrice: true,
           isEditorsChoice: true,
           image: 'fake_imgs/room.jpg',
@@ -47,27 +49,34 @@ describe('On List Page', function() {
     });
   };
 
-  const setAppState = () => {
-    setStub();
-    cy.visit(URL);
-  };
-
   it('User writes on search text input', function() {
+    const inputText = getRandomString(getRandomNumber(1, 10));
+
     cy.visit(URL);
+
     cy.get('#search')
-      .type('room 3')
-      .should('have.value', 'room 3');
+      .type(inputText)
+      .should('have.value', inputText);
   });
 
   it('User clicks the "room 1" item link', function() {
-    setAppState();
-    cy.contains('room 1').click({ force: true });
+    const firstName = getRandomString(getRandomNumber(1, 20));
+
+    setStub(firstName, firstName);
+    cy.visit(URL);
+
+    cy.contains(firstName).click({ force: true });
     cy.url().should('include', 'detail/1');
   });
 
   it('User sees that list items are rendered', function() {
-    setAppState();
-    cy.contains('room 1');
-    cy.contains('room 2');
+    const firstName = getRandomString(getRandomNumber(1, 20));
+    const secondName = getRandomString(getRandomNumber(1, 20));
+
+    setStub(firstName, secondName);
+    cy.visit(URL);
+
+    cy.contains(firstName);
+    cy.contains(secondName);
   });
 });
