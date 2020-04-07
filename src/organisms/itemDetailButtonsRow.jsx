@@ -30,7 +30,7 @@ export default function ItemDetailButtonsRow({ literals, likeCount, handleClick 
       <Grid item xs={3}>
         <IconTextButton text={literals.like} icon={<LikeIcon />} handleClick={handleClick} />
       </Grid>
-      <Grid item xs={2} container>
+      <Grid item xs={2} container id="likeCount">
         <Typography variant="h6" color="inherit" className={classes.name}>
           {likeCount}
         </Typography>

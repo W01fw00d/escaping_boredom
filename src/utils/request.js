@@ -1,7 +1,7 @@
 import getJson from './json_file';
 
 const currentDockerUrl = 'http://127.0.0.1:5000';
-const isMocked = true;
+const isMocked = false;
 
 const httpGet = (params, callback) => {
   const url = `${currentDockerUrl}/${params}`;
