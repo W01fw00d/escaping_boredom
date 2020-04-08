@@ -6,10 +6,24 @@
 npm install
 ```
 
-2. Deploy app
+2. Deploy Front App
 
 ```
 npm start
+```
+
+3. Deploy Back App
+
+Run mongod and then:
+
+```
+npm run start-back
+```
+
+If you need to restart the server:
+
+```
+rs
 ```
 
 - Launch Storybook
