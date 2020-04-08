@@ -40,12 +40,15 @@ npm run-script build
 
 - React
 
+- Node
+- MongoDB
+
 - Babel (compilation)
 - Webpack (bundling)
 
-- Prettier, ESLint (code style tools, based on airbnb conventions), Husky (pre-commit automated formatting tool)
-
 - Cypress: Integration Testing Tool
+
+- Prettier, ESLint (code style tools, based on airbnb conventions), Husky (pre-commit automated formatting tool)
 
 - Material-ui (this custom design system is based on this one)
 - Storybook (tool that helps implementing [atomic design](https://bradfrost.com/blog/post/atomic-web-design/))

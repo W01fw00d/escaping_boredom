@@ -1,10 +1,10 @@
 import getJson from './json_file';
 
-const currentDockerUrl = 'http://127.0.0.1:5000';
+const backServerUrl = 'http://127.0.0.1:4000';
 const isMocked = false;
 
 const httpGet = (params, callback) => {
-  const url = `${currentDockerUrl}/${params}`;
+  const url = `${backServerUrl}/${params}`;
   const xmlHttp = new XMLHttpRequest();
   xmlHttp.onreadystatechange = () => {
     if (xmlHttp.readyState === 4 && xmlHttp.status === 200)
