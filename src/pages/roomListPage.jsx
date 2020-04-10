@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
 import { getTags, getRooms } from '../utils/request';
-import RoomListTemplate from '../templates/roomListTemplate';
+
+import { RoomListTemplate } from 'chemistry-ui';
 
 export default function RoomListPage() {
   const literals = {
