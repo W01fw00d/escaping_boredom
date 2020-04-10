@@ -8,18 +8,20 @@ describe('On Detail Page, navigate', function() {
     cy.route({
       method: 'GET',
       url: 'room-details/*',
-      response: {
-        id: '1',
-        name,
-        description: getRandomString(getRandomNumber(1, 100)),
-        likeCount,
-        commentsCount: 0,
-        price: 0,
-        isGroupPrice: false,
-        isEditorsChoice: false,
-        image: 'fake_imgs/room.jpg',
-        tags: [1, 2],
-      },
+      response: [
+        {
+          id: '1',
+          name,
+          description: getRandomString(getRandomNumber(1, 100)),
+          likeCount,
+          commentsCount: 0,
+          price: 0,
+          isGroupPrice: false,
+          isEditorsChoice: false,
+          image: 'fake_imgs/room.jpg',
+          tags: [1, 2],
+        },
+      ],
     });
   };
 

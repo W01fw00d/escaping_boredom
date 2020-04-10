@@ -8,7 +8,7 @@ import { ThemeProvider } from '@material-ui/core';
 
 import theme from '../../styles/global-styles';
 import allLiterals from '../../../public/storybook_fake_data/literals.json';
-import allData from '../../../public/storybook_fake_data/room-details.json';
+import allData from '../../../public/storybook_fake_data/rooms.json';
 
 import RoomDetailTemplate from '../roomDetailTemplate';
 
@@ -19,10 +19,11 @@ const literals = {
   buy: allLiterals.buy,
 };
 
+const details = allData[0];
 const data = {
-  image: allData.image,
-  price: allData.price,
-  isGroupPrice: allData.isGroupPrice,
+  image: details.image,
+  price: details.price,
+  isGroupPrice: details.isGroupPrice,
 };
 
 const getThemeProviderDecorator = storyFn => (
