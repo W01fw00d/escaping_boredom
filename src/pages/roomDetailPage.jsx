@@ -18,13 +18,14 @@ export default function RoomDetailPage() {
   useEffect(() => {
     getRoomDetails(itemId, result => {
       if (result) {
+        const roomData = result[0];
         setData({
-          name: result.name,
-          image: result.image,
-          likeCount: result.likeCount,
-          description: result.description,
-          price: result.price,
-          isGroupPrice: result.isGroupPrice,
+          name: roomData.name,
+          image: roomData.image,
+          likeCount: roomData.likeCount,
+          description: roomData.description,
+          price: roomData.price,
+          isGroupPrice: roomData.isGroupPrice,
         });
       }
     });
