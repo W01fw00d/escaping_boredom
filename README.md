@@ -26,10 +26,18 @@ If you need to restart the server:
 rs
 ```
 
-- Launch Storybook
+- chemistry-ui as local dependency (development and testing)
+
+On chemistry-ui:
 
 ```
-npm run storybook
+npm link
+```
+
+Then, on this project:
+
+```
+npm link chemistry-ui
 ```
 
 - Launch Cypress
@@ -46,9 +54,9 @@ npm run-script build
 
 ## Functional description
 
-- If the App is launched, fake data comes from .json mock files.
+- When the App is launched, real data como from node.js server.
 
-- If Storybook is launched, a catalogue will appear with all the App components. A component will be rendered with its default material-ui theme, if our custom theme isn't explicitly defined on its story (templates themes are defined to help visualization).
+- When Cypress Tests are launched, fake data is used from randomized JSONs.
 
 ## Technical Stack
 
@@ -64,18 +72,11 @@ npm run-script build
 
 - Prettier, ESLint (code style tools, based on airbnb conventions), Husky (pre-commit automated formatting tool)
 
-- Material-ui (this custom design system is based on this one)
-- Storybook (tool that helps implementing [atomic design](https://bradfrost.com/blog/post/atomic-web-design/))
-
 ## Technical discusion
 
 - A pre-commit has been added to this repository to help maintain a coherent code style, even if new developers were added to this project in the future.
 
-- Material-ui components have been "wrapped" with custom components to allow changing to another design system with ease in a potential future.
-
 - Literals are not hardcoded but instead passed down to components by props in order to implement a multilanguage support system in the future.
-
-- Two color themes have been defined in order to allow the different colored buttons to coexist on the same design system.
 
 - A random number and string generator has been added to Cypress Tests in order to garantee that different data will fit correctly on the UI (for example, this simulates the effect of having different languages).
 
