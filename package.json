@@ -7,8 +7,6 @@
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode development",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -s ./public -p 6006",
-    "build-storybook": "build-storybook",
     "cypress:open": "cypress open",
     "start-back": "nodemon server.js"
   },
@@ -19,20 +17,16 @@
   "author": "romay.gabriel",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/m-rec/0a07418b40b5c4e0b00a8bbb05f7c7efd328bf48/issues"
+    "url": "https://github.com/W01fw00d/escaping_boredom/issues"
   },
-  "homepage": "https://github.com/m-rec/0a07418b40b5c4e0b00a8bbb05f7c7efd328bf48#readme",
+  "homepage": "https://github.com/W01fw00d/escaping_boredom#readme",
   "devDependencies": {
     "@babel/cli": "^7.1.0",
     "@babel/core": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
-    "@babel/preset-react": "^7.0.0",
-    "@storybook/addon-actions": "^5.3.12",
-    "@storybook/addon-links": "^5.3.12",
-    "@storybook/addons": "^5.3.12",
-    "@storybook/react": "^5.3.12",
+    "@babel/preset-react": "^7.9.4",
     "babel-eslint": "^10.0.3",
-    "babel-loader": "^8.0.2",
+    "babel-loader": "^8.1.0",
     "css-loader": "^1.0.0",
     "cypress": "^4.3.0",
     "eslint": "^6.8.0",
@@ -60,8 +54,7 @@
     "express": "^4.17.1",
     "mongoose": "^5.9.7",
     "react-hot-loader": "^4.12.19",
-    "react-router-dom": "^5.1.2",
-    "storybook-react-router": "^1.0.8"
+    "react-router-dom": "^5.1.2"
   },
   "husky": {
     "hooks": {
