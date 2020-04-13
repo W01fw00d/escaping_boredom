@@ -26,7 +26,7 @@ If you need to restart the server:
 rs
 ```
 
-- chemistry-ui as local dependency (development and testing)
+- chemistry-ui as local dependency (for development and testing)
 
 On chemistry-ui:
 
@@ -38,6 +38,14 @@ Then, on this project:
 
 ```
 npm link chemistry-ui
+```
+
+There're some issues with npm link regarding having different React and ReactDomRouter versions.
+To solve this:
+
+```
+npm link ../chemistry-ui/node_modules/react
+npm link ../chemistry-ui/node_modules/react-router-dom
 ```
 
 - Launch Cypress
@@ -69,6 +77,8 @@ npm run-script build
 - Webpack (bundling)
 
 - Cypress: Integration Testing Tool
+
+- Chemistry-ui: my own Components Library, based on Material-ui
 
 - Prettier, ESLint (code style tools, based on airbnb conventions), Husky (pre-commit automated formatting tool)
 
