@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-import { getTags, getRooms } from '../utils/request';
+import { ItemListTemplate } from 'chemistry-ui';
 
-import { RoomListTemplate } from 'chemistry-ui';
+import { getTags, getRooms } from '../utils/request';
 
 export default function RoomListPage() {
   const literals = {
@@ -19,7 +19,7 @@ export default function RoomListPage() {
   }, []);
 
   return (
-    <RoomListTemplate
+    <ItemListTemplate
       literals={literals}
       search={search}
       itemList={items}

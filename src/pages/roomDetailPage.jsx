@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { getRoomDetails } from '../utils/request';
+import { ItemDetailTemplate } from 'chemistry-ui';
 
-import { RoomDetailTemplate } from 'chemistry-ui';
+import { getRoomDetails } from '../utils/request';
 
 export default function RoomDetailPage() {
   const literals = {
@@ -32,5 +32,5 @@ export default function RoomDetailPage() {
     });
   }, [itemId]);
 
-  return <RoomDetailTemplate literals={literals} data={data} handleClick={() => {}} />;
+  return <ItemDetailTemplate literals={literals} data={data} handleClick={() => {}} />;
 }
