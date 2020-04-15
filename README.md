@@ -9,7 +9,7 @@ npm install
 2. Deploy Front App
 
 ```
-npm start
+npm run front
 ```
 
 3. Deploy Back App
@@ -17,7 +17,7 @@ npm start
 Run mongod and then:
 
 ```
-npm run start-back
+npm run back
 ```
 
 If you need to restart the server:
@@ -51,7 +51,7 @@ npm link ../chemistry-ui/node_modules/react-router-dom
 - Launch Cypress
 
 ```
-npm run cypress:open
+npm run cypress
 ```
 
 - Build
