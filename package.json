@@ -4,8 +4,8 @@
   "description": "Portfolio App about Escape Rooms",
   "main": "index.js",
   "scripts": {
-    "front": "webpack-dev-server --mode development",
-    "back": "nodemon server.js",
+    "dev-front": "webpack-dev-server --mode development",
+    "dev-back": "nodemon server.js",
     "utest": "babel-node spec/run.js",
     "ftest": "cypress run",
     "ftest-ui": "cypress open",
