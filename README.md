@@ -48,10 +48,16 @@ npm link ../chemistry-ui/node_modules/react
 npm link ../chemistry-ui/node_modules/react-router-dom
 ```
 
-- Launch Cypress
+- Launch Jasmine (Unit Tests)
 
 ```
-npm run cypress
+npm run utest
+```
+
+- Launch Cypress (Functional Tests)
+
+```
+npm run ftest
 ```
 
 - Build

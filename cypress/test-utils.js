@@ -1,8 +1,8 @@
-export function getRandomNumber(min, max) {
-  return Math.floor(Math.random() * max + min);
+export function getRandomNumber(min = 0, max = 9) {
+  return min >= max ? min : Math.floor(Math.random() * max + min);
 }
 
-export function getRandomString(requestedLength) {
+export function getRandomString(requestedLength = 10) {
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 -_';
   let result = '';
 
