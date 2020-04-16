@@ -1,3 +1,5 @@
+![Node.js CI](https://github.com/W01fw00d/escaping_boredom/workflows/Node.js%20CI/badge.svg)
+
 [Demo](https://escaping-boredom.herokuapp.com/)
 
 ## How to use
