@@ -1,3 +1,5 @@
+[Demo](https://escaping-boredom.herokuapp.com/)
+
 ## How to use
 
 1. Install dependencies
