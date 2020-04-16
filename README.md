@@ -97,6 +97,8 @@ npm run-script build
 
 - A random number and string generator has been added to Cypress Tests in order to garantee that different data will fit correctly on the UI (for example, this simulates the effect of having different languages).
 
+- Build and unit tests are executed on the CI in GitHub with every push to master and pull request.
+
 ## Atribution
 
 - Favicon generated from [original image](https://pixabay.com/photos/leuchtkasten-shield-output-note-1773916/), which is under Pixabay License, free for commercial use
