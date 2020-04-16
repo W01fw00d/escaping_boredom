@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "dev-front": "webpack-dev-server --mode development",
-    "dev-back": "nodemon server.js",
+    "dev-back": "nodemon back-server.js",
     "utest": "babel-node spec/run.js",
     "ftest": "cypress run",
     "ftest-ui": "cypress open",
-    "build": "webpack",
+    "build": "webpack --mode development",
     "start": "node server.js",
     "heroku-postbuild": "webpack -p"
   },
