@@ -7,7 +7,8 @@
     "front": "webpack-dev-server --mode development",
     "back": "nodemon server.js",
     "utest": "babel-node spec/run.js",
-    "ftest": "cypress open",
+    "ftest": "cypress run",
+    "ftest-ui": "cypress open",
     "build": "webpack --mode development"
   },
   "repository": {

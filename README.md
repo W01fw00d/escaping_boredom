@@ -82,6 +82,7 @@ npm run-script build
 - Babel (compilation)
 - Webpack (bundling)
 
+- Jasmine: Unit Testing Tool
 - Cypress: Integration Testing Tool
 
 - [Chemistry-UI](https://github.com/W01fw00d/chemistry-ui): my own Components Library, based on Material-UI.
