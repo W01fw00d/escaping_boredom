@@ -9,7 +9,8 @@
     "utest": "babel-node spec/run.js",
     "ftest": "cypress run",
     "ftest-ui": "cypress open",
-    "build": "webpack --mode development"
+    "build": "webpack --mode development",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
