@@ -10,7 +10,8 @@
     "ftest": "cypress run",
     "ftest-ui": "cypress open",
     "build": "webpack",
-    "start": "node server.js"
+    "start": "node server.js",
+    "heroku-postbuild": "webpack -p"
   },
   "repository": {
     "type": "git",
