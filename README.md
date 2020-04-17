@@ -93,7 +93,7 @@ npm run-script build
 
 - Prettier, ESLint (code style tools, based on airbnb conventions), Husky (pre-commit automated formatting tool)
 
-- Keroku: deploying free site for this App Demo
+- Heroku: deploying free site for this App Demo
 
 ## Technical discusion
 
