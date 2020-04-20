@@ -8,7 +8,7 @@
     "price": 30,
     "isGroupPrice": false,
     "isEditorsChoice": false,
-    "image": "fake_imgs/room.jpg",
+    "image": "roomImage",
     "tags": [1, 2]
   },
   {
@@ -20,7 +20,7 @@
     "price": 150,
     "isGroupPrice": true,
     "isEditorsChoice": true,
-    "image": "fake_imgs/room.jpg",
+    "image": "roomImage",
     "category_id": [3]
   }
 ]

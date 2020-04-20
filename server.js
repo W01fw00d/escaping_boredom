@@ -17,7 +17,7 @@ mongoose.connect('mongodb://localhost/Tododb', () => {
   roomModel.initData(roomModel);
 });
 
-app.use(function (req, res, next) {
+app.use(function(req, res, next) {
   // We allow all origins for the moment for development purpouses
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
@@ -32,7 +32,7 @@ routes(app);
 
 // send the user to index html page inspite of the url
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'index.html'));
+  res.sendFile(path.resolve(__dirname, 'dist/index.html'));
 });
 
 app.use(({ originalUrl }, res) => res.status(404).send(`"${originalUrl}" endpoint was not found`));

@@ -1,25 +1,23 @@
 const path = require('path');
 const webpack = require('webpack');
+var nodeExternals = require('webpack-node-externals');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
   mode: 'development',
+  entry: './src/index.js',
+  output: {
+    filename: 'main.[contentHash].js',
+    path: path.resolve(__dirname, 'dist'),
+  },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/env', '@babel/react'],
-            },
-          },
-        ],
-      },
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        },
       },
       {
         test: /\.(woff2?|jpe?g|png|gif|ico)$/,
@@ -27,17 +25,17 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/template.html',
+    }),
+    //, new webpack.HotModuleReplacementPlugin()
+  ],
   resolve: { extensions: ['*', '.js', '.jsx'] },
-  output: {
-    path: path.resolve(__dirname, 'dist/'),
-    publicPath: '/dist/',
-    filename: 'bundle.js',
-  },
   devServer: {
     contentBase: path.join(__dirname, 'public/'),
     port: 3000,
     publicPath: 'http://localhost:3000/dist/',
     hotOnly: true,
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
 };
