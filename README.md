@@ -1,3 +1,5 @@
+![Node.js CI](https://github.com/W01fw00d/escaping_boredom/workflows/Node.js%20CI/badge.svg)
+
 [Demo](https://escaping-boredom.herokuapp.com/)
 
 ## How to use
@@ -90,6 +92,8 @@ npm run-script build
 - [Chemistry-UI](https://github.com/W01fw00d/chemistry-ui): my own Components Library, based on Material-UI.
 
 - Prettier, ESLint (code style tools, based on airbnb conventions), Husky (pre-commit automated formatting tool)
+
+- Heroku: deploying free site for this App Demo
 
 ## Technical discusion
 
