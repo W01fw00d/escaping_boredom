@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 5000;
 const app = express();
 
 // the __dirname is the current directory from where the script is running
@@ -15,14 +15,15 @@ mongoose.Promise = global.Promise;
 //mongoose.connect('mongodb://localhost/Tododb', () => {
 mongoose.connect(
   'mongodb+srv://escapingBoredom:CM9pW7gYwVuptOk7@' +
-  'escaping-boredom-au4px.mongodb.net/test?' +
-  'retryWrites=true&w=majority',
+    'escaping-boredom-au4px.mongodb.net/test?' +
+    'retryWrites=true&w=majority',
   () => {
     tagModel.initData(tagModel);
     roomModel.initData(roomModel);
-  });
+  },
+);
 
-app.use(function (req, res, next) {
+app.use(function(req, res, next) {
   // We allow all origins for the moment for development purpouses
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');

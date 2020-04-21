@@ -10,7 +10,7 @@
     "ftest": "cypress run",
     "ftest-ui": "cypress open",
     "build": "webpack --mode development",
-    "server": "node server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",

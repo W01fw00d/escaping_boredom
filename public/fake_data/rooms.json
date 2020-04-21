@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "room 1",
+    "name": "external room 1",
     "description": "description room 1",
     "likeCount": 5,
     "commentsCount": 0,
@@ -13,7 +13,7 @@
   },
   {
     "id": 2,
-    "name": "room 2",
+    "name": "external room 2",
     "description": "description room 2",
     "like_count": 0,
     "comment_count": 11,
