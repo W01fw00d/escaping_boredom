@@ -48,8 +48,15 @@ There're some issues with npm link regarding having different React and ReactDom
 To solve this:
 
 ```
-npm link ../chemistry-ui/node_modules/react
-npm link ../chemistry-ui/node_modules/react-router-dom
+cd ../chemistry-ui/node_modules/react
+npm link
+cd ../../../escaping_boredom
+npm link react
+
+cd ../chemistry-ui/node_modules/react-router-dom
+npm link
+cd ../../../escaping_boredom
+npm link react-router-dom
 ```
 
 - Launch Jasmine (Unit Tests)
