@@ -1,4 +1,4 @@
-const backServerUrl = 'localhost:4000';
+const backServerUrl = 'http://127.0.0.1:5000';
 
 const httpGet = (params, callback) => {
   const url = `${backServerUrl}/${params}`;
