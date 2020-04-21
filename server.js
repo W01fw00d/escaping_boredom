@@ -12,10 +12,15 @@ const mongoose = require('mongoose'),
   bodyParser = require('body-parser');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/Tododb', () => {
-  tagModel.initData(tagModel);
-  roomModel.initData(roomModel);
-});
+//mongoose.connect('mongodb://localhost/Tododb', () => {
+mongoose.connect(
+  'mongodb+srv://escapingBoredom:CM9pW7gYwVuptOk7@' +
+  'escaping-boredom-au4px.mongodb.net/test?' +
+  'retryWrites=true&w=majority',
+  () => {
+    tagModel.initData(tagModel);
+    roomModel.initData(roomModel);
+  });
 
 app.use(function (req, res, next) {
   // We allow all origins for the moment for development purpouses
