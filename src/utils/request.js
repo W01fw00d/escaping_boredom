@@ -1,7 +1,5 @@
-const backServerUrl = 'http://127.0.0.1:5000';
-
 const httpGet = (params, callback) => {
-  const url = `${backServerUrl}/${params}`;
+  const url = `/${params}`;
   const xmlHttp = new XMLHttpRequest();
   xmlHttp.onreadystatechange = () => {
     if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
