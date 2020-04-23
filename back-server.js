@@ -1,6 +1,6 @@
 const express = require('express'),
   app = express(),
-  port = 5000,
+  port = process.env.PORT || 5000,
   mongoose = require('mongoose'),
   tagModel = require('./server/api/models/tag-model'),
   roomModel = require('./server/api/models/room-model'),
@@ -12,7 +12,7 @@ mongoose.connect('mongodb://localhost/Tododb', () => {
   roomModel.initData(roomModel);
 });
 
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   // We allow all origins for the moment for development purpouses
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
