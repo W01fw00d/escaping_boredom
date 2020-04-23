@@ -1,6 +1,6 @@
 const express = require('express'),
   app = express(),
-  port = process.env.PORT || 5000,
+  port = 5000,
   mongoose = require('mongoose'),
   tagModel = require('./server/api/models/tag-model'),
   roomModel = require('./server/api/models/room-model'),
