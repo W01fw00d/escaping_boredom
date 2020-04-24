@@ -1,4 +1,4 @@
-<img alt="Escaping Boredom Logo" src="https://github.com/W01fw00d/escaping_boredom/blob/master/public/escaping-boredom-title-logo.png?raw=true" width="350" title="by MartaX">
+<img alt="Escaping Boredom Logo" src="https://github.com/W01fw00d/escaping_boredom/blob/master/public/escaping-boredom-title-logo.png?raw=true" width="350" title="by Marta Ximenis">
 
 ![Node.js CI](https://github.com/W01fw00d/escaping_boredom/workflows/Node.js%20CI/badge.svg)
 
@@ -125,7 +125,9 @@ npm run build
 
 ## Atribution
 
-- Favicon generated from [original image](https://pixabay.com/photos/leuchtkasten-shield-output-note-1773916/), which is under Pixabay License, free for commercial use
+- Logo created by [Marta Ximenis](https://www.domestika.org/es/projects/686583-escaping-boredom)
+
+- Favicon formatted from logo with [favicon-generator](https://www.favicon-generator.org/)
 
 - Editor's choice banner from [original image](https://pixabay.com/illustrations/tape-red-decor-for-the-web-plate-2410588/), which is under Pixabay License, free for commercial use
 
