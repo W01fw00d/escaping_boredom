@@ -60,17 +60,6 @@ describe('On List Page', function () {
     cy.contains(secondName);
   });
 
-  it('User opens drawer side menu and sees author and project data', function () {
-    const firstName = getRandomString(getRandomNumber(1, 20));
-
-    setStub(firstName, firstName);
-    cy.visit(URL);
-
-    cy.get('#drawerButton').click({ force: true });
-    cy.contains('Gabriel Romay Machado');
-    cy.contains('romay.gabriel@gmail.com');
-  });
-
   it('User writes on search text input', function () {
     const inputText = getRandomString(getRandomNumber(1, 10));
 

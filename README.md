@@ -13,15 +13,15 @@ npm install
 2. Deploy Front App
 
 ```
-npm run front
+npm run dev-front
 ```
 
 3. Deploy Back App
 
-Run mongod and then:
+Launch a mongoDB and then:
 
 ```
-npm run back
+npm run dev-back
 ```
 
 If you need to restart the server:
@@ -64,13 +64,28 @@ npm run utest
 - Launch Cypress (Functional Tests)
 
 ```
+npm run dev-front
+```
+
+Launch without ui
+```
 npm run ftest
+```
+
+Launch only a spec
+```
+npm run ftest-spec cypress/integration/[spec-file-name].spec.js
+```
+
+Launch with ui
+```
+npm run ftest-ui
 ```
 
 - Build
 
 ```
-npm run-script build
+npm run build
 ```
 
 ## Functional description
