@@ -34,20 +34,21 @@ rs
 
 There're some issues with npm link regarding having different react and react-router-dom instances.
 To solve this:
-
+1.
 ```
 cd ../chemistry-ui/node_modules/react
 npm link
 cd ../../../escaping_boredom
 npm link react
-
+```
+2.
 ```
 cd ../chemistry-ui/node_modules/react-router-dom
 npm link
 cd ../../../escaping_boredom
 npm link react-router-dom
 ```
-
+3.
 ```
 cd ../chemistry-ui
 npm link
