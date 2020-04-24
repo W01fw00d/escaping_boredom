@@ -1,6 +1,6 @@
 import { getRandomNumber, getRandomString } from '../test-utils';
 
-describe('On List Page', function() {
+describe('On List Page', function () {
   const URL = 'list';
 
   const setStub = (firstName, secondName) => {
@@ -49,7 +49,29 @@ describe('On List Page', function() {
     });
   };
 
-  it('User writes on search text input', function() {
+  it('User sees that list items are rendered', function () {
+    const firstName = getRandomString(getRandomNumber(1, 20));
+    const secondName = getRandomString(getRandomNumber(1, 20));
+
+    setStub(firstName, secondName);
+    cy.visit(URL);
+
+    cy.contains(firstName);
+    cy.contains(secondName);
+  });
+
+  it('User opens drawer side menu and sees author and project data', function () {
+    const firstName = getRandomString(getRandomNumber(1, 20));
+
+    setStub(firstName, firstName);
+    cy.visit(URL);
+
+    cy.get('#drawerButton').click({ force: true });
+    cy.contains('Gabriel Romay Machado');
+    cy.contains('romay.gabriel@gmail.com');
+  });
+
+  it('User writes on search text input', function () {
     const inputText = getRandomString(getRandomNumber(1, 10));
 
     cy.visit(URL);
@@ -59,7 +81,7 @@ describe('On List Page', function() {
       .should('have.value', inputText);
   });
 
-  it('User clicks the "room 1" item link', function() {
+  it('User clicks the "room 1" item link', function () {
     const firstName = getRandomString(getRandomNumber(1, 20));
 
     setStub(firstName, firstName);
@@ -67,16 +89,5 @@ describe('On List Page', function() {
 
     cy.contains(firstName).click({ force: true });
     cy.url().should('include', 'detail/1');
-  });
-
-  it('User sees that list items are rendered', function() {
-    const firstName = getRandomString(getRandomNumber(1, 20));
-    const secondName = getRandomString(getRandomNumber(1, 20));
-
-    setStub(firstName, secondName);
-    cy.visit(URL);
-
-    cy.contains(firstName);
-    cy.contains(secondName);
   });
 });

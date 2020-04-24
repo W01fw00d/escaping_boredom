@@ -32,19 +32,7 @@ rs
 
 - chemistry-ui as local dependency (for development and testing)
 
-On chemistry-ui:
-
-```
-npm link
-```
-
-Then, on this project:
-
-```
-npm link chemistry-ui
-```
-
-There're some issues with npm link regarding having different React and ReactDomRouter versions.
+There're some issues with npm link regarding having different react and react-router-dom instances.
 To solve this:
 
 ```
@@ -53,10 +41,18 @@ npm link
 cd ../../../escaping_boredom
 npm link react
 
+```
 cd ../chemistry-ui/node_modules/react-router-dom
 npm link
 cd ../../../escaping_boredom
 npm link react-router-dom
+```
+
+```
+cd ../chemistry-ui
+npm link
+cd ../escaping_boredom
+npm link chemistry-ui
 ```
 
 - Launch Jasmine (Unit Tests)
