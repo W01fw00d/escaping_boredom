@@ -1,4 +1,4 @@
-![Escaping Boredom Logo](https://github.com/W01fw00d/escaping_boredom/blob/master/public/escaping-boredom-title-logo.png?raw=true)
+<img alt="Escaping Boredom Logo" src="https://github.com/W01fw00d/escaping_boredom/blob/master/public/escaping-boredom-title-logo.png?raw=true" width="350" title="by MartaX">
 
 ![Node.js CI](https://github.com/W01fw00d/escaping_boredom/workflows/Node.js%20CI/badge.svg)
 
