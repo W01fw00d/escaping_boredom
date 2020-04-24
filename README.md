@@ -1,3 +1,5 @@
+![Escaping Boredom Logo](https://github.com/W01fw00d/escaping_boredom/blob/master/public/escaping-boredom-title-logo.png?raw=true)
+
 ![Node.js CI](https://github.com/W01fw00d/escaping_boredom/workflows/Node.js%20CI/badge.svg)
 
 ## How to use
