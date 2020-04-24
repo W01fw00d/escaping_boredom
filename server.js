@@ -24,7 +24,7 @@ mongoose.connect(
 );
 
 app.use(function (req, res, next) {
-  // We allow all origins for the moment for development purpouses
+  // We allow all origins for the moment for development purposes
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   next();
