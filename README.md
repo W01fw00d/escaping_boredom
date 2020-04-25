@@ -32,28 +32,12 @@ rs
 
 - chemistry-ui as local dependency (for development and testing)
 
-There're some issues with npm link regarding having different react and react-router-dom instances.
-To solve this:
-1.
+"npm link" is useful, but there're some issues regarding having different "react" and "react-router-dom" instances.
+
+To solve this, you can execute this bash script that will perform the correct linking:
+
 ```
-cd ../chemistry-ui/node_modules/react
-npm link
-cd ../../../escaping_boredom
-npm link react
-```
-2.
-```
-cd ../chemistry-ui/node_modules/react-router-dom
-npm link
-cd ../../../escaping_boredom
-npm link react-router-dom
-```
-3.
-```
-cd ../chemistry-ui
-npm link
-cd ../escaping_boredom
-npm link chemistry-ui
+sh link.sh
 ```
 
 - Launch Jasmine (Unit Tests)
